@@ -1,210 +1,30 @@
-/* Base Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-body {
-    background-color: #000000;
-    color: #ffffff;
-    min-height: 100vh;
-    position: relative;
-    overflow-x: hidden;
-}
-
-/* Background Neon Lines */
-.bg-neon-lines {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('https://cdn-icons-png.flaticon.com/512/1005/1005141.png') no-repeat center;
-    background-size: cover;
-    opacity: 0.15;
-    z-index: -1;
-}
-
-/* Main Resume Container */
-.resume-container {
-    max-width: 1200px;
-    margin: 2rem auto;
-    padding: 0 1rem;
-    background-color: rgba(0, 0, 0, 0.85);
-    border: 1px solid #00a8ff;
-    border-radius: 12px;
-    box-shadow: 0 0 20px rgba(0, 168, 255, 0.5);
-}
-
-/* Header Section */
-.resume-header {
-    padding: 2rem;
-    border-bottom: 2px solid #00a8ff;
-}
-
-.profile-section {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    flex-wrap: wrap;
-}
-
-.profile-img {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid #00a8ff;
-    box-shadow: 0 0 15px rgba(0, 168, 255, 0.7);
-}
-
-.profile-info h1 {
-    font-size: 2.5rem;
-    color: #00a8ff;
-    text-shadow: 0 0 10px rgba(0, 168, 255, 0.9);
-}
-
-.tagline {
-    font-size: 1.2rem;
-    margin: 0.5rem 0 1rem;
-    color: #cccccc;
-}
-
-.neon-btn {
-    padding: 0.8rem 1.5rem;
-    background-color: transparent;
-    border: 2px solid #00a8ff;
-    color: #00a8ff;
-    border-radius: 25px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: all 0.3s ease;
-    box-shadow: 0 0 10px rgba(0, 168, 255, 0.5);
-}
-
-.neon-btn:hover {
-    background-color: #00a8ff;
-    color: #000000;
-    box-shadow: 0 0 20px rgba(0, 168, 255, 0.9);
-}
-
-/* Section Styles */
-section {
-    padding: 2rem;
-}
-
-.section-title {
-    font-size: 1.8rem;
-    color: #00a8ff;
-    margin-bottom: 1.5rem;
-    text-shadow: 0 0 8px rgba(0, 168, 255, 0.7);
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-/* About Section */
-.about-section p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    color: #dddddd;
-}
-
-/* Skills Section */
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
-}
-
-.skill-item {
-    margin-bottom: 1rem;
-}
-
-.skill-name {
-    display: block;
-    margin-bottom: 0.5rem;
-    color: #cccccc;
-}
-
-.skill-bar {
-    width: 100%;
-    height: 12px;
-    background-color: #222222;
-    border-radius: 6px;
-    overflow: hidden;
-    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
-}
-
-.skill-progress {
-    height: 100%;
-    background-color: #00a8ff;
-    box-shadow: 0 0 10px rgba(0, 168, 255, 0.8);
-    border-radius: 6px;
-    animation: fillProgress 1.5s ease forwards;
-}
-
-@keyframes fillProgress {
-    from { width: 0; }
-    to { width: var(--progress-width); }
-}
-
-/* Education Section */
-.education-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1.5rem;
-}
-
-.edu-card {
-    background-color: rgba(20, 20, 20, 0.8);
-    padding: 1.5rem;
-    border-radius: 8px;
-    border: 1px solid #00a8ff;
-    box-shadow: 0 0 10px rgba(0, 168, 255, 0.3);
-    transition: transform 0.3s ease;
-}
-
-.edu-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 0 15px rgba(0, 168, 255, 0.6);
-}
-
-.edu-card h3 {
-    color: #00a8ff;
-    margin-bottom: 0.5rem;
-}
-
-.edu-school {
-    color: #dddddd;
-    margin-bottom: 0.3rem;
-}
-
-.edu-date {
-    color: #999999;
-    font-size: 0.9rem;
-}
-
-/* Contact Section */
-.contact-links {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-.contact-links a {
-    color: #cccccc;
-    text-decoration: none;
-    font-size: 1.1rem;
-    display: flex;
-    align-items: center;
-    gap: 0.8rem;
-    transition: all 0.3s ease;
-}
-
-.contact-links a:hover {
-    color: #00a8ff;
-    text-shadow: 0 0 8px rgba(0, 168, 255, 0.7);
-}
+:root{--bg:#02060a;--panel:#050d14;--neon:#00aaff;--text:#d8ecf7;--muted:#8aa6b8}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:"Segoe UI",system-ui,sans-serif;line-height:1.6;min-height:100vh}
+nav{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;padding:16px 6vw;border-bottom:1px solid #0a2a3d;position:sticky;top:0;background:rgba(2,6,10,.92);backdrop-filter:blur(6px)}
+.logo{color:var(--neon);font-weight:700;font-size:1.2rem;text-decoration:none;text-shadow:0 0 10px var(--neon)}
+nav ul{display:flex;gap:6px;list-style:none;flex-wrap:wrap}
+nav a.link{color:var(--text);text-decoration:none;padding:6px 14px;border-radius:20px;border:1px solid transparent}
+nav a.link:hover,nav a.active{border-color:var(--neon);color:var(--neon);box-shadow:0 0 10px rgba(0,170,255,.4)}
+a:focus-visible{outline:2px solid var(--neon);outline-offset:3px}
+main{max-width:900px;margin:40px auto;padding:0 6vw}
+.card{background:var(--panel);border:1px solid var(--neon);border-radius:10px;padding:28px;box-shadow:0 0 18px rgba(0,170,255,.25)}
+h1{font-size:2.4rem;color:var(--neon);text-shadow:0 0 12px rgba(0,170,255,.7)}
+h2{color:var(--neon);margin-bottom:16px;font-size:1.8rem}
+h3{color:var(--neon);font-size:1.05rem}
+p{margin-bottom:12px}
+.muted{color:var(--muted);font-size:.9rem}
+.hero{display:flex;gap:32px;align-items:center;flex-wrap:wrap;min-height:60vh}
+.hero img{width:200px;height:200px;border-radius:50%;object-fit:cover;border:3px solid var(--neon);box-shadow:0 0 25px var(--neon)}
+.btn{display:inline-block;margin:8px 10px 0 0;padding:10px 22px;border:2px solid var(--neon);border-radius:30px;color:var(--neon);text-decoration:none;font-weight:600}
+.btn:hover{background:var(--neon);color:#000;box-shadow:0 0 18px var(--neon)}
+.group{margin-bottom:22px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.chips span{padding:5px 14px;border:1px solid var(--neon);border-radius:20px;font-size:.9rem}
+.item{border-left:3px solid var(--neon);padding:4px 0 4px 18px;margin-bottom:24px}
+.contact-list{list-style:none}
+.contact-list li{margin-bottom:14px}
+.contact-list a{color:var(--text);text-decoration:none}
+.contact-list a:hover{color:var(--neon)}
+footer{text-align:center;color:var(--muted);padding:30px;font-size:.85rem}
+@media(max-width:600px){.hero{justify-content:center;text-align:center}h1{font-size:1.9rem}}
